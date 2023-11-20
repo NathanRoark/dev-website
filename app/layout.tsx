@@ -19,7 +19,7 @@ const defaultViewport: Viewport = {
 export { defaultViewport }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://telperion.io"),
+  metadataBase: new URL("https://nathanroark.dev"),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -41,11 +41,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Telperion",
-      url: "https://telperion.io",
+      name: "Nathan Roark",
+      url: "https://nathanroark.dev",
     },
   ],
-  creator: "Telpeiron",
+  creator: "Nathan Roark",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -83,31 +83,29 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
-          <Toaster />
-          <Analytics />
-        </body>
-      </html>
-    </>
+          <div className="relative flex min-h-screen flex-col">
+            <SiteHeader />
+            <div className="flex-1">{children}</div>
+          </div>
+          <TailwindIndicator />
+        </ThemeProvider>
+        <Toaster />
+        <Analytics />
+      </body>
+    </html>
   )
 }

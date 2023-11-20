@@ -30,26 +30,26 @@ export function MainNav() {
           Home
         </Link>
         <Link
-          href="/team"
+          href="/projects"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/team")
+            pathname?.startsWith("/projects")
               ? "text-foreground"
               : "text-foreground/60"
           )}
         >
-          Team
+          Projects
         </Link>
         <Link
-          href="/contact"
+          href="/resume"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/contact")
+            pathname?.startsWith("/resume")
               ? "text-foreground"
               : "text-foreground/60"
           )}
         >
-          Contact
+          Resume
         </Link>
       </nav>
     </div>

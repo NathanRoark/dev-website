@@ -1,19 +1,19 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Telperion",
-  url: "https://telperion.nathanroark.dev",
-  ogImage: "https://telperion.nathanroark.dev/og.jpg",
+  name: "Nathan Roark",
+  url: "https://nathanroark.dev",
+  ogImage: "https://nathanroark.dev/og.jpg",
   description:
-    "A team of young technical profesionals ready to solve the worlds toughest challenges.",
+    "A team of young technical professionals ready to solve the worlds toughest challenges.",
   mainNav: [
     {
-      title: "Team",
-      href: "/team",
+      title: "Projects",
+      href: "/projects",
     },
     {
-      title: "Contact",
-      href: "/contact",
+      title: "Resume",
+      href: "/resume",
     },
   ],
   links: {
