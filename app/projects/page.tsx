@@ -49,7 +49,7 @@ export default function ProjectsPage() {
         </PageHeaderHeading>
       </PageHeader>
 
-      <div className="grid grid-cols-1  gap-8 md:grid-cols-2  xl:grid-cols-3">
+      <div className="grid grid-cols-1  gap-8 sm:px-16 md:grid-cols-2 md:px-8 lg:grid-cols-3  xl:px-0">
         {projectsData.map((project) => (
           <ProjectCard
             key={project.name + "-card"}
