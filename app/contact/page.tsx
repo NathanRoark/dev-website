@@ -6,8 +6,6 @@ import {
 } from "@/components/page-header"
 
 export default function IndexPage() {
-  const contact_form_action = "#"
-
   return (
     <div className="container relative pb-8">
       <PageHeader className="pb-8">

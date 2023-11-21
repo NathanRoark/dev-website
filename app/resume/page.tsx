@@ -1,42 +1,43 @@
 // import Skills from "@/components/Skills"
 // import { backendSkills, frontendSkills, otherSkills } from "@/utils/skills"
-const atmosphere = "from-green-300 via-blue-500 to-purple-600 font-sans"
-
-const gradientAtmosphere = "bg-gradient-to-br " + atmosphere
+import { PageHeader, PageHeaderHeading } from "@/components/page-header"
+const spearmint =
+  "bg-gradient-to-r from-green-300 via-green-400 to-green-500 font-sans"
+const gradientAtmosphere = "bg-gradient-to-br " + spearmint
 
 export default function ResumePage() {
   return (
-    <div className="container relative py-8">
-      <section>
-        <div className="pb-32">
-          <div className="flex justify-between gap-x-2 text-transparent sm:gap-0">
-            <div
-              className={`w-fit bg-clip-text pb-4  md:w-1/2 lg:w-1/2 ${gradientAtmosphere}`}
-            >
-              <h1 className="pb-4 font-mono text-5xl font-extrabold  leading-none sm:text-[2rem] lg:text-[3rem] ">
-                Resume
-              </h1>
+    <div className="container relative px-24 pb-32 text-gray-300">
+      <div className="pb-32">
+        <PageHeader className="pb-8">
+          <PageHeaderHeading className="flex items-center justify-center ">
+            <div className="flex flex-col">
+              <div className="bg-gradient-to-r from-green-300 via-green-400 to-green-500 bg-clip-text pb-4 pr-16  text-transparent">
+                <span className="text-2xl font-black sm:text-4xl lg:text-6xl xl:text-7xl">
+                  Resume
+                </span>
+              </div>
+              <span className="text-lg font-semibold sm:text-xl lg:text-2xl xl:text-3xl">
+                My professional resume in web form.
+              </span>
             </div>
-          </div>
-          <ul className="flex flex-col gap-y-16 pt-8">
-            <li>
-              <Summary />
-            </li>
-            {/* <li>
-            <ProgrammingLanguages />
-          </li> */}
-            <li>
-              <Proficiencies />
-            </li>
-            <li>
-              <ProfExperience />
-            </li>
-            <li>
-              <Education />
-            </li>
-          </ul>
-        </div>
-      </section>
+          </PageHeaderHeading>
+        </PageHeader>
+        <ul className="flex flex-col gap-y-16 pt-8">
+          <li>
+            <Summary />
+          </li>
+          <li>
+            <Proficiencies />
+          </li>
+          <li>
+            <ProfExperience />
+          </li>
+          <li>
+            <Education />
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }
@@ -50,9 +51,9 @@ const Summary = () => {
         Summary
       </h3>
       <hr />
-      <ul className="list-disc pl-6">
+      <ul className="list-disc pl-6 text-lg">
         <li>Full Stack Software Engineer</li>
-        <li>3 years of professional experience</li>
+        <li>4 years of professional experience</li>
         <li>Secret Security Clearance</li>
         <li>
           Worked on teams in collaborative innovative and technical environments
@@ -76,52 +77,29 @@ const Proficiencies = () => {
         Core Skills Technologies & Proficiencies
       </h3>
       <hr />
-      <ul className="list-disc pl-8">
-        <li>Web Development</li>
-        <span className="pl-4 text-sm md:text-lg">
-          Vercel | Digital Ocean | PlanetScale
-        </span>
-        <li>Native App Development</li>
-        <span className="pl-4 text-sm md:text-lg">ElectronJS | Qt | Tauri</span>
-        <li>Military Networks</li>
-        <span className="pl-4 text-sm md:text-lg">Link16 | DIS | VMF</span>
-        <li>Modeling and Simulation</li>
-        <span className="pl-4 text-sm md:text-lg">
-          Agent-based | Discrete Event | Monte Carlo | Distributed
-        </span>
+      <ul className="list-disc space-y-2">
+        <li className="flex flex-col">
+          <strong>Native App Development</strong>
+          <span className="pl-4">Qt | ElectronJS | Tauri</span>
+        </li>
+        <li className="flex flex-col">
+          <strong>Frontend Technologies</strong>
+          <span className="pl-4">
+            React | Next.js | TailwindCSS | Jotai | Zustand | D3.js | Astro
+          </span>
+        </li>
+        <li className="flex flex-col">
+          <strong>Backend Technologies</strong>
+          <span className="pl-4">C++ | Rust | Node.js | Python</span>
+        </li>
+        <li className="flex flex-col">
+          <strong> Database Systems</strong>
+          <span className="pl-4">PostgreSQL | MongoDB | SQLite | MySQL</span>
+        </li>
       </ul>
     </>
   )
 }
-
-// const ProgrammingLanguages = () => {
-//   return (
-//     <>
-//       <h3
-//         className={`bg-clip-text pb-4 font-mono text-3xl font-extrabold leading-none tracking-tight  text-transparent sm:text-[2rem] ${gradientAtmosphere}`}
-//       >
-//         Programming Languages & Tools
-//       </h3>
-//       <div className="flex w-full flex-col sm:flex-row">
-//         <div className="py-2 pr-2 ">
-//           <h4 className="text-center text-lg font-bold">Frontend</h4>
-//           <hr />
-//           <Skills skills={frontendSkills} className="odd:lg:flex-row-reverse" />
-//         </div>
-//         <div className="px-2 py-2 ">
-//           <h4 className="text-center text-lg font-bold">Backend</h4>
-//           <hr />
-//           <Skills skills={backendSkills} className="odd:lg:flex-row-reverse" />
-//         </div>
-//         <div className="py-2 pl-2 ">
-//           <h4 className="text-center text-lg font-bold">Other</h4>
-//           <hr />
-//           <Skills skills={otherSkills} className="odd:lg:flex-row-reverse" />
-//         </div>
-//       </div>
-//     </>
-//   )
-// }
 
 const ProfExperience = () => {
   return (

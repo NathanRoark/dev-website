@@ -1,10 +1,10 @@
 .card {
   aspect-ratio: 1 / 1.2;
-  border: 0.2vmin solid rgb(183, 202, 255);
-  cursor: pointer;
+  /* border: 0.2vmin solid rgb(100, 100, 100); */
+  /* cursor: pointer; */
   position: relative;
-  width: 100%;
-  max-width: 36rem;
+  /* width: 100%; */
+  /* max-width: 36rem; */
 }
 
 .card:hover:before {
@@ -23,22 +23,29 @@
 .card:hover > .cardContent > .cardTop > .cardSubtitle > .cardSubtitleWord {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
+  transition:
+    opacity 0ms,
+    transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
 }
 
 .card:hover > .cardContent > .cardTop {
   opacity: 1;
   transform: scale(1.05);
   background: rgb(0, 0, 0, 0.5);
-  transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
+  transition:
+    opacity 0ms,
+    transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
 }
 
 .card:hover > .cardContent > .cardBottom > .techStack > .techItem {
   transform: scale(1.05);
-  transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
+  transition:
+    opacity 0ms,
+    transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
 }
 
 .card:before {
+  /* previous colors */
   /* background: linear-gradient(
     130deg,
     transparent 0% 33%,
@@ -55,19 +62,24 @@
   );
   background-position: 0% 0%;
   background-size: 300% 300%;
-  content: '';
+  content: "";
   left: 0px;
   pointer-events: none;
   position: absolute;
   top: 0px;
-  transition: background-position 350ms ease, transform 350ms ease;
+  transition:
+    background-position 350ms ease,
+    transform 350ms ease;
   height: 100%;
   width: 100%;
   z-index: 1;
 }
 
 .cardContent {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 8%,
+    transparent 8%
+  );
   background-position: 0% 0%;
   background-size: 2.5rem 2.5rem;
   padding: 1rem;
@@ -80,8 +92,7 @@
 
 .cardTitle,
 .cardSubtitle {
-  color: white;
-  font-family: 'Anek Latin', sans-serif;
+  font-family: "Anek Latin", sans-serif;
   font-weight: 400;
   margin: 0px;
 }

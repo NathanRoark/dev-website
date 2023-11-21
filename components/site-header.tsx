@@ -1,6 +1,5 @@
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
-import { ModeToggle } from "@/components/mode-toggle"
 
 export function SiteHeader() {
   return (
@@ -9,9 +8,7 @@ export function SiteHeader() {
         <MainNav />
         <MobileNav />
         <div className="flex flex-1 items-center  justify-end space-x-2 md:justify-end">
-          <nav className="flex items-center">
-            <ModeToggle />
-          </nav>
+          <nav className="flex items-center"></nav>
         </div>
       </div>
     </header>

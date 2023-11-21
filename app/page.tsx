@@ -8,22 +8,16 @@ import {
 } from "@/components/page-header"
 
 export default function IndexPage() {
-  const fire = "from-amber-500 via-red-500 to-yellow-500"
-  const atmosphere = "from-green-300 via-blue-500 to-purple-600"
-  const gradientFire = "bg-gradient-to-br " + fire
-  const gradientAtmosphere = "bg-gradient-to-br " + atmosphere
+  const gradient = "bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400"
   return (
     <div className="container relative pb-8">
       <PageHeader className="pb-8 ">
-        <PageHeaderHeading className="flex items-center justify-center italic">
+        <PageHeaderHeading className="flex items-center justify-center">
           <a className="flex flex-col">
             <div
-              className={cn(
-                gradientAtmosphere,
-                "bg-clip-text pb-4 pr-16  text-transparent"
-              )}
+              className={cn(gradient, "bg-clip-text pr-16  text-transparent")}
             >
-              <span className="text-4xl font-black sm:text-6xl lg:text-8xl xl:text-9xl">
+              <span className="text-4xl font-black italic sm:text-6xl lg:text-8xl xl:text-9xl">
                 Nathan Roark
               </span>
             </div>
@@ -53,7 +47,7 @@ export default function IndexPage() {
             Huntsville.
           </p>
         </PageHeaderDescription>
-        <div className="flex w-full items-center space-x-4 pb-8  pt-4 sm:pl-8 md:pb-10 lg:pt-8">
+        <div className="flex w-full items-center space-x-4 pb-8  pt-4 md:pb-10 lg:pt-8">
           <LinkCard
             name="Projects"
             description="All of my projects, open source packages, and apps"
@@ -63,6 +57,11 @@ export default function IndexPage() {
             name="Resume"
             description="Semi-formal version of my resume in a web format"
             link="/resume"
+          />
+          <LinkCard
+            name="Links"
+            description="Semi-formal version of my resume in a web format"
+            link="/links"
           />
         </div>
       </PageHeader>
