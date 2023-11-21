@@ -7,17 +7,17 @@ const gradientAtmosphere = "bg-gradient-to-br " + spearmint
 
 export default function ResumePage() {
   return (
-    <div className="container relative px-24 pb-32 text-gray-300">
+    <div className="container relative pb-32 text-gray-300">
       <div className="pb-32">
         <PageHeader className="pb-8">
           <PageHeaderHeading className="flex items-center justify-center ">
             <div className="flex flex-col">
               <div className="bg-gradient-to-r from-green-300 via-green-400 to-green-500 bg-clip-text pb-4 pr-16  text-transparent">
-                <span className="text-2xl font-black sm:text-4xl lg:text-6xl xl:text-7xl">
+                <span className="text-4xl font-black lg:text-6xl xl:text-7xl">
                   Resume
                 </span>
               </div>
-              <span className="text-lg font-semibold sm:text-xl lg:text-2xl xl:text-3xl">
+              <span className="text-xl font-semibold lg:text-2xl xl:text-3xl">
                 My professional resume in web form.
               </span>
             </div>

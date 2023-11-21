@@ -9,16 +9,16 @@ import { PageHeader, PageHeaderHeading } from "@/components/page-header"
 import Link from "next/link"
 export default function AboutPage() {
   return (
-    <div className="container relative px-24 pb-32 text-gray-300  ">
+    <div className="container relative pb-32 text-gray-300  ">
       <PageHeader className="pb-8">
         <PageHeaderHeading className="flex items-center justify-center ">
           <div className="flex flex-col">
             <div className="bg-gradient-to-br from-blue-300 to-purple-500 bg-clip-text pb-4 pr-16  text-transparent">
-              <span className="text-2xl font-black sm:text-4xl lg:text-6xl xl:text-7xl">
+              <span className="text-4xl font-black lg:text-6xl xl:text-7xl">
                 Links
               </span>
             </div>
-            <span className="text-lg font-semibold sm:text-xl lg:text-2xl xl:text-3xl">
+            <span className="text-xl font-semibold lg:text-2xl xl:text-3xl">
               Links to places you can find me on the internet.
             </span>
           </div>

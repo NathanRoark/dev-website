@@ -15,6 +15,10 @@ export const siteConfig = {
       title: "Resume",
       href: "/resume",
     },
+    {
+      title: "Links",
+      href: "/links",
+    },
   ],
   links: {
     twitter: "https://twitter.com/nathanroark",

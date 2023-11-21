@@ -33,7 +33,7 @@ export default function IndexPage() {
           <p className="py-2">
             I&apos;m a <b>Full Stack Software Engineer</b> at{" "}
             <Link
-              className="font-bold text-blue-600 opacity-75 hover:opacity-100 dark:text-blue-400"
+              className="font-bold hover:text-blue-300/70"
               href="https://www.trideum.com/"
             >
               Trideum
@@ -47,7 +47,7 @@ export default function IndexPage() {
             Huntsville.
           </p>
         </PageHeaderDescription>
-        <div className="flex w-full items-center space-x-4 pb-8  pt-4 md:pb-10 lg:pt-8">
+        <div className="flex w-full flex-col pb-8 pt-4 sm:flex-row  sm:space-x-4 md:pb-10 lg:pt-8">
           <LinkCard
             name="Projects"
             description="All of my projects, open source packages, and apps"

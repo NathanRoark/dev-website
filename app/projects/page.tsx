@@ -32,18 +32,18 @@ export default function ProjectsPage() {
   const atmosphere = "from-green-300 via-blue-500 to-purple-600"
   const sunset = "from-indigo-500 via-pink-500 to-yellow-500"
   return (
-    <div className="container relative px-24 pb-32 text-gray-300  ">
+    <div className="container relative pb-32 text-gray-300  ">
       <PageHeader className="pb-8">
         <PageHeaderHeading className="flex flex-col">
           <div className="flex justify-start">
             <div className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text pb-4 pr-16  text-transparent">
-              <span className="text-2xl font-black sm:text-4xl lg:text-6xl xl:text-7xl">
+              <span className="text-4xl font-black lg:text-6xl xl:text-7xl">
                 Projects
               </span>
             </div>
           </div>
 
-          <span className="text-lg font-semibold sm:text-xl lg:text-2xl xl:text-3xl">
+          <span className="text-xl font-semibold lg:text-2xl xl:text-3xl">
             Open source projects I have worked on.
           </span>
         </PageHeaderHeading>

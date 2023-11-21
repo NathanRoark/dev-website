@@ -50,17 +50,24 @@ export function MobileNav() {
             </MobileLink>
             <MobileLink
               key="mobile-link-team"
-              href={"/team"}
+              href={"/projects"}
               onOpenChange={setOpen}
             >
-              Team
+              Projects
             </MobileLink>
             <MobileLink
               key="mobile-link-contact"
-              href={"/contact"}
+              href={"/resume"}
               onOpenChange={setOpen}
             >
-              Contact
+              Resume
+            </MobileLink>
+            <MobileLink
+              key="mobile-link-contact"
+              href={"/links"}
+              onOpenChange={setOpen}
+            >
+              Links
             </MobileLink>
           </div>
         </ScrollArea>
