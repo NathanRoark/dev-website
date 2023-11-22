@@ -39,12 +39,10 @@ export default function IndexPage() {
               Trideum
             </Link>{" "}
             where I own the frontend of many of our applications and build tools
-            for engineers. I&apos;m a specializing in{" "}
-            <b>React, Next.js and C++</b>. I have a Undergraduate Degree in
-            Computer Engineering from The University of Alabama in Huntsville.
-            And I&apos;m currently working on my{" "}
-            <b>Masters in Computer Science</b> from The University of Alabama in
-            Huntsville.
+            for engineers. I specialize in <b>React, Next.js and C++</b>. I have
+            a Undergraduate Degree in Computer Engineering and am currently
+            working on my <b>Masters in Computer Science</b> from The University
+            of Alabama in Huntsville.
           </p>
         </PageHeaderDescription>
         <div className="flex w-full flex-col pb-8 pt-4 sm:flex-row  sm:space-x-4 md:pb-10 lg:pt-8">
