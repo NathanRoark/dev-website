@@ -60,7 +60,7 @@ export default function IndexPage() {
           />
           <LinkCard
             name="Links"
-            description="Semi-formal version of my resume in a web format"
+            description="Links to places you can find me on the internet"
             link="/links"
           />
         </div>
