@@ -3,19 +3,11 @@ import { PageHeader, PageHeaderHeading } from "@/components/page-header"
 
 const projectsData = [
   {
-    name: "Music Blog",
-    description:
-      "Static Music Blog for showing and talking about albums that I like.",
+    name: "Personal Blog",
+    description: "Static Blog for showing and talking about media that I like.",
     techStack: ["Astro", "TailwindCSS", "TypeScript", "Markdown"],
-    link: "https://music.nathanroark.dev",
-    repo: "https://github.com/nathanroark/music-website",
-  },
-  {
-    name: "Modeling & Simulation",
-    description: "A collection of my Modeling and Simulation projects.",
-    techStack: ["React", "NextJS", "TypeScript", "TailwindCSS"],
-    link: "https://modeling-and-simulation.nathanroark.dev/",
-    repo: "https://github.com/nathanroark/modeling-and-simulation",
+    link: "https://nathanroark.com",
+    repo: "https://github.com/nathanroark/blog",
   },
   {
     name: "Dev Website & Portfolio",
