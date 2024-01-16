@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/react"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -79,9 +78,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
+
       <body
         className={cn(
-          "no-scrollbar min-h-screen overscroll-y-auto bg-background font-sans antialiased",
+          "no-scrollbar overscroll-y-auto bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
@@ -91,14 +91,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
-            <div className="flex-1">{children}</div>
-          </div>
+          <div>{children}</div>
           <TailwindIndicator />
         </ThemeProvider>
-        <Analytics />
       </body>
+      <Analytics />
     </html>
   )
 }

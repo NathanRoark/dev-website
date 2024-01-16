@@ -1,23 +1,9 @@
 import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
-} from "@/images/logos"
-import { Icons } from "@/components/icons"
+  GitHubIcon,
+  LinkedInIcon,
+  DiscordIcon,
+  XIcon,
+} from "@/components/icons"
 
 export const RESUME_DATA = {
   name: "Nathan Roark",
@@ -32,31 +18,41 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://nathanroark.dev",
   contact: {
     email: "nathanroark@protonmail.com",
-    tel: "+48530213401",
     social: [
       {
         name: "GitHub",
         url: "https://github.com/NathanRoark",
-        icon: Icons.gitHub,
+        icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/nathanroark/",
-        icon: Icons.linkedin,
+        url: "https://www.linkedin.com/in/nathan-roark/",
+        icon: LinkedInIcon,
       },
       {
         name: "X",
         url: "https://x.com/nathanroark",
-        icon: Icons.twitter,
+        icon: XIcon,
+      },
+      {
+        name: "Discord",
+        url: "https://discordapp.com/users/nroark",
+        icon: DiscordIcon,
       },
     ],
   },
   education: [
     {
-      school: "The Univserity of Alabama in Huntsville",
+      school: "The University of Alabama in Huntsville",
+      degree: "Master's Degree in Computer Science",
+      year: "2024",
+      extra: "4.0 GPA",
+    },
+    {
+      school: "The University of Alabama in Huntsville",
       degree: "Bachelor's Degree in Computer Engineering",
-      start: "",
-      end: "2020",
+      year: "2020",
+      extra: "Dean's List",
     },
   ],
   work: [
@@ -67,8 +63,8 @@ export const RESUME_DATA = {
       title: "Full Stack Engineer",
       start: "2023",
       end: "2024",
-      description: "",
-      // "Developed and maintained front end applications accross multiple teams. Worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
+      description:
+        "Created and owned the frontend of many of our applications across multiple teams. Technologies: React, TypeScript, Tailwind, D3",
     },
     {
       company: "Trideum",
@@ -77,8 +73,8 @@ export const RESUME_DATA = {
       title: "Software Engineer",
       start: "2021",
       end: "2023",
-      description: "",
-      // "Developed and maintained multiple web applications for the US Army. Worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
+      description:
+        "Built and maintained several applications for internal and external customers. Technologies: C++, Qt",
     },
   ],
   skills: [
@@ -88,24 +84,24 @@ export const RESUME_DATA = {
     "Node.js",
     "Rust",
     "C++",
-    "Python",
+    "Qt",
   ],
   projects: [
     {
       title: "Personal Blog",
       description:
         "Static Blog for showing and talking about media that I like.",
-      techStack: ["Astro", "TailwindCSS", "TypeScript", "Markdown"],
+      techStack: ["Astro", "TypeScript", "Tailwind", "Markdown"],
       link: {
         label: "nathanroark.com",
         href: "https://nathanroark.com",
       },
     },
     {
-      title: "Dev Website & Portfolio",
+      title: "Dev Page",
       description:
         "This website! My developer website to show my software engineering self.",
-      techStack: ["NextJS", "TypeScript", "TailwindCSS"],
+      techStack: ["NextJS", "TypeScript", "Tailwind"],
       link: {
         label: "nathanroark.dev",
         href: "https://nathanroark.dev",
