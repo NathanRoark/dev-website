@@ -11,6 +11,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nathanroark.dev"),
+  robots: {
+    index: true,
+    follow: true,
+  },
   title:  siteConfig.name,
   description: siteConfig.description,
   keywords: [
