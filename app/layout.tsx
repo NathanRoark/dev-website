@@ -7,12 +7,7 @@ import { cn } from "@/lib/utils"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 
-const defaultViewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-}
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nathanroark.dev"),
@@ -33,7 +28,6 @@ export const metadata: Metadata = {
       url: "https://nathanroark.dev",
     },
   ],
-  viewport: defaultViewport,
   creator: "Nathan Roark",
   openGraph: {
     type: "website",
