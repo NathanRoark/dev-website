@@ -5,19 +5,11 @@ export const siteConfig = {
   url: "https://nathanroark.dev",
   ogImage: "https://nathanroark.dev/og.jpg",
   description:
-    "A team of young technical professionals ready to solve the worlds toughest challenges.",
+    "Full Stack Engineer passionate about building and learning new things.",
   mainNav: [
     {
-      title: "Projects",
-      href: "/projects",
-    },
-    {
-      title: "Resume",
-      href: "/resume",
-    },
-    {
-      title: "Links",
-      href: "/links",
+      title: "Home",
+      href: "/",
     },
   ],
   links: {

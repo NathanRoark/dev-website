@@ -14,8 +14,6 @@ const defaultViewport: Viewport = {
   ],
 }
 
-export { defaultViewport }
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://nathanroark.dev"),
   title: {
@@ -38,6 +36,7 @@ export const metadata: Metadata = {
       url: "https://nathanroark.dev",
     },
   ],
+  viewport: defaultViewport,
   creator: "Nathan Roark",
   openGraph: {
     type: "website",

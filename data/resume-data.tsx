@@ -98,7 +98,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Dev Page",
+      title: "Dev CV",
       description:
         "This website! My developer website to show my software engineering self.",
       techStack: ["NextJS", "TypeScript", "Tailwind"],

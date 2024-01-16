@@ -46,7 +46,7 @@ export default function Page() {
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
+              {/* {RESUME_DATA.contact.tel ? (
                 <Button
                   className="size-8"
                   variant="outline"
@@ -57,7 +57,7 @@ export default function Page() {
                     <PhoneIcon className="size-4" />
                   </a>
                 </Button>
-              ) : null}
+              ) : null} */}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
@@ -78,11 +78,11 @@ export default function Page() {
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
+              {/* {RESUME_DATA.contact.tel ? (
                 <a href={`tel:${RESUME_DATA.contact.tel}`}>
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
-              ) : null}
+              ) : null} */}
             </div>
           </div>
 
