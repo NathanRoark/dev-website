@@ -1,180 +1,188 @@
-// import Skills from "@/components/Skills"
-// import { backendSkills, frontendSkills, otherSkills } from "@/utils/skills"
-import { PageHeader, PageHeaderHeading } from "@/components/page-header"
-const spearmint =
-  "bg-gradient-to-r from-green-300 via-green-400 to-green-500 font-sans"
-const gradientAtmosphere = "bg-gradient-to-br " + spearmint
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Card, CardHeader, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Metadata } from "next"
+import { Section } from "@/components/ui/section"
+import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { RESUME_DATA } from "@/data/resume-data"
+import { ProjectCard } from "@/components/project-card"
 
-export default function ResumePage() {
+export const metadata: Metadata = {
+  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+  description: RESUME_DATA.summary,
+}
+
+export default function Page() {
   return (
-    <div className="container relative pb-32 text-gray-300">
-      <div className="pb-32">
-        <PageHeader className="pb-8">
-          <PageHeaderHeading className="flex items-center justify-center ">
-            <div className="flex flex-col">
-              <div className="bg-gradient-to-r from-green-300 via-green-400 to-green-500 bg-clip-text pb-4 pr-16  text-transparent">
-                <span className="text-4xl font-black lg:text-6xl xl:text-7xl">
-                  Resume
-                </span>
-              </div>
-              <span className="text-xl font-semibold lg:text-2xl xl:text-3xl">
-                My professional resume in web form.
-              </span>
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
+      <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
+        <div className="flex items-center justify-between">
+          <div className="flex-1 space-y-1.5">
+            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+              {RESUME_DATA.about}
+            </p>
+            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+              <a
+                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+                href={RESUME_DATA.locationLink}
+                target="_blank"
+              >
+                <GlobeIcon className="size-3" />
+                {RESUME_DATA.location}
+              </a>
+            </p>
+            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+              {RESUME_DATA.contact.email ? (
+                <Button
+                  className="size-8"
+                  variant="outline"
+                  size="icon"
+                  asChild
+                >
+                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                    <MailIcon className="size-4" />
+                  </a>
+                </Button>
+              ) : null}
+              {RESUME_DATA.contact.tel ? (
+                <Button
+                  className="size-8"
+                  variant="outline"
+                  size="icon"
+                  asChild
+                >
+                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                    <PhoneIcon className="size-4" />
+                  </a>
+                </Button>
+              ) : null}
+              {RESUME_DATA.contact.social.map((social) => (
+                <Button
+                  key={social.name}
+                  className="size-8"
+                  variant="outline"
+                  size="icon"
+                  asChild
+                >
+                  <a href={social.url}>
+                    <social.icon className="size-4" />
+                  </a>
+                </Button>
+              ))}
             </div>
-          </PageHeaderHeading>
-        </PageHeader>
-        <ul className="flex flex-col gap-y-16 pt-8">
-          <li>
-            <Summary />
-          </li>
-          <li>
-            <Proficiencies />
-          </li>
-          <li>
-            <ProfExperience />
-          </li>
-          <li>
-            <Education />
-          </li>
-        </ul>
-      </div>
-    </div>
-  )
-}
+            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+              {RESUME_DATA.contact.email ? (
+                <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                  <span className="underline">{RESUME_DATA.contact.email}</span>
+                </a>
+              ) : null}
+              {RESUME_DATA.contact.tel ? (
+                <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                  <span className="underline">{RESUME_DATA.contact.tel}</span>
+                </a>
+              ) : null}
+            </div>
+          </div>
 
-const Summary = () => {
-  return (
-    <>
-      <h3
-        className={`bg-clip-text pb-4 font-mono text-3xl font-extrabold leading-none tracking-tight  text-transparent sm:text-[2rem] ${gradientAtmosphere}`}
-      >
-        Summary
-      </h3>
-      <hr />
-      <ul className="list-disc pl-6 text-lg">
-        <li>Full Stack Software Engineer</li>
-        <li>4 years of professional experience</li>
-        <li>Secret Security Clearance</li>
-        <li>
-          Worked on teams in collaborative innovative and technical environments
-        </li>
-        <li>Specializing in JavaScript Frontend and C++ Backend development</li>
-        <li>
-          Passionate about creating aesthetically great projects with efficient
-          reusable, and readable code
-        </li>
-      </ul>
-    </>
-  )
-}
+          <Avatar className="size-28">
+            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
+            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+          </Avatar>
+        </div>
+        <Section>
+          <h2 className="text-xl font-bold">About</h2>
+          <p className="text-pretty font-mono text-sm text-muted-foreground">
+            {RESUME_DATA.summary}
+          </p>
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Work Experience</h2>
+          {RESUME_DATA.work.map((work) => {
+            return (
+              <Card key={work.company}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      <a className="hover:underline" href={work.link}>
+                        {work.company}
+                      </a>
 
-const Proficiencies = () => {
-  return (
-    <>
-      <h3
-        className={`bg-clip-text pb-4 font-mono text-3xl font-extrabold leading-none tracking-tight  text-transparent sm:text-[2rem] ${gradientAtmosphere}`}
-      >
-        Core Skills Technologies & Proficiencies
-      </h3>
-      <hr />
-      <ul className="list-disc space-y-2">
-        <li className="flex flex-col">
-          <strong>Native App Development</strong>
-          <span className="pl-4">Qt | ElectronJS | Tauri</span>
-        </li>
-        <li className="flex flex-col">
-          <strong>Frontend Technologies</strong>
-          <span className="pl-4">
-            React | Next.js | TailwindCSS | Jotai | Zustand | D3.js | Astro
-          </span>
-        </li>
-        <li className="flex flex-col">
-          <strong>Backend Technologies</strong>
-          <span className="pl-4">C++ | Rust | Node.js | Python</span>
-        </li>
-        <li className="flex flex-col">
-          <strong> Database Systems</strong>
-          <span className="pl-4">PostgreSQL | MongoDB | SQLite | MySQL</span>
-        </li>
-      </ul>
-    </>
-  )
-}
+                      <span className="inline-flex gap-x-1">
+                        {work.badges.map((badge) => (
+                          <Badge
+                            variant="secondary"
+                            className="align-middle text-xs"
+                            key={badge}
+                          >
+                            {badge}
+                          </Badge>
+                        ))}
+                      </span>
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {work.start} - {work.end}
+                    </div>
+                  </div>
 
-const ProfExperience = () => {
-  return (
-    <>
-      <h3
-        className={`bg-clip-text pb-4 font-mono text-3xl font-extrabold leading-none tracking-tight  text-transparent sm:text-[2rem] ${gradientAtmosphere}`}
-      >
-        Professional Experience
-      </h3>
-      <hr />
-      <div className="flex flex-col justify-between gap-y-6">
-        <div className="flex flex-col justify-between sm:flex-row">
-          <div className="flex flex-col justify-between">
-            <p>
-              <strong>Software Engineer</strong>
-            </p>
-            <p>March 2021 - Present</p>
+                  <h4 className="font-mono text-sm leading-none">
+                    {work.title}
+                  </h4>
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">
+                  {work.description}
+                </CardContent>
+              </Card>
+            )
+          })}
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Education</h2>
+          {RESUME_DATA.education.map((education) => {
+            return (
+              <Card key={education.school}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="font-semibold leading-none">
+                      {education.school}
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {education.start} - {education.end}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2">{education.degree}</CardContent>
+              </Card>
+            )
+          })}
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Skills</h2>
+          <div className="flex flex-wrap gap-1">
+            {RESUME_DATA.skills.map((skill) => {
+              return <Badge key={skill}>{skill}</Badge>
+            })}
           </div>
-          <div className="flex flex-col justify-between sm:text-right">
-            <p>Trideum</p>
-            <p>Huntsville, AL</p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-between sm:flex-row">
-          <div className="flex flex-col justify-between">
-            <p>
-              <strong>Computer Engineering Intern</strong>
-            </p>
-            <p>May 2017 - August 2017</p>
-          </div>
-          <div className="flex flex-col justify-between sm:text-right">
-            <p>a.i. Solutions</p>
-            <p>Huntsville, AL</p>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
+        </Section>
 
-const Education = () => {
-  return (
-    <>
-      <h3
-        className={`bg-clip-text pb-4 font-mono text-3xl font-extrabold leading-none tracking-tight  text-transparent sm:text-[2rem] ${gradientAtmosphere}`}
-      >
-        Education
-      </h3>
-      <hr />{" "}
-      <div className="flex flex-col justify-between gap-y-6">
-        <div className="flex flex-col  justify-between sm:flex-row">
-          <div className="flex flex-col justify-between">
-            <p>
-              <strong>Masters in Computer Science | 4.0 GPA</strong>
-            </p>
-            <p>Expected December 2024</p>
+        <Section className="print-force-new-page scroll-mb-16">
+          <h2 className="text-xl font-bold">Projects</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+            {RESUME_DATA.projects.map((project) => {
+              return (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  tags={project.techStack}
+                  link={"link" in project ? project.link.href : undefined}
+                />
+              )
+            })}
           </div>
-          <div className="flex flex-col justify-between sm:text-right">
-            <p>UAH</p>
-            <p>Huntsville, AL</p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-between sm:flex-row">
-          <div className="flex flex-col justify-between">
-            <p>
-              <strong>Bachelors in Computer Engineering | Deans List</strong>
-            </p>
-            <p>Achieved December 2020</p>
-          </div>
-          <div className="flex flex-col justify-between sm:text-right">
-            <p>UAH</p>
-            <p>Huntsville, AL</p>
-          </div>
-        </div>
-      </div>
-    </>
+        </Section>
+      </section>
+    </main>
   )
 }

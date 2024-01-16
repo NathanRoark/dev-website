@@ -1,69 +1,59 @@
-import React from "react"
-import styles from "@/styles/projectCard.module.css"
-import Link from "next/link"
-import { Icons } from "@/components/icons"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "./ui/card"
+import { Badge } from "./ui/badge"
 
-const ProjectCard: React.FC<{
-  name: string
+interface Props {
+  title: string
   description: string
-  link: string
-  techStack: string[]
-  repo?: string
-}> = ({ name, description, link, techStack, repo }) => {
-  const createSubtitle = (text: string) => {
-    return text.split(" ").map((word, index) => (
-      <span
-        style={{
-          transitionDelay: `${index * 40}ms`,
-        }}
-        className={styles.cardSubtitleWord}
-        key={"subtitleIndex-" + text + "-" + index}
-      >
-        {word}
-      </span>
-    ))
-  }
+  tags: readonly string[]
+  link?: string
+}
 
+export function ProjectCard({ title, description, tags, link }: Props) {
   return (
-    <Link className="group" href={link} target="_blank">
-      <Card className={styles.card}>
-        <CardContent className={styles.cardContent}>
-          <CardHeader className={styles.cardTop}>
-            <CardTitle className={styles.cardTitle}>{name}</CardTitle>
-            <div className={styles.cardSubtitle}>
-              {createSubtitle(description).map((e) => e)}
-            </div>
-          </CardHeader>
-          <div className={styles.cardBottom}>
-            <div className={styles.techStack}>
-              {techStack.map((tech) => (
-                <div key={name + tech} className={styles.techItem}>
-                  {tech}
-                </div>
-              ))}
-            </div>
-            {repo && (
-              <div className="group flex items-end justify-evenly rounded-lg p-1 text-white">
-                <Link
-                  className=""
-                  href={repo}
-                  target="_blank"
-                  passHref
-                  legacyBehavior
-                >
-                  <Icons.gitHub
-                    strokeWidth="32"
-                    fill="currentColor"
-                    className="h-12 w-12 rounded-lg bg-black p-2 duration-200 hover:scale-110"
-                  />
-                </Link>
-              </div>
+    <Card className="flex flex-col overflow-hidden border border-muted p-3">
+      <CardHeader className="">
+        <div className="space-y-1">
+          <CardTitle className="text-base">
+            {link ? (
+              <a
+                href={link}
+                target="_blank"
+                className="inline-flex items-center gap-1 hover:underline"
+              >
+                {title}{" "}
+                <span className="size-1 rounded-full bg-green-500"></span>
+              </a>
+            ) : (
+              title
             )}
+          </CardTitle>
+          <div className="hidden font-mono text-xs underline print:visible">
+            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-        </CardContent>
-      </Card>
-    </Link>
+          <CardDescription className="font-mono text-xs">
+            {description}
+          </CardDescription>
+        </div>
+      </CardHeader>
+      <CardContent className="mt-auto flex">
+        <div className="mt-2 flex flex-wrap gap-1">
+          {tags.map((tag) => (
+            <Badge
+              className="px-1 py-0 text-[10px]"
+              variant="secondary"
+              key={tag}
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
   )
 }
-export default ProjectCard

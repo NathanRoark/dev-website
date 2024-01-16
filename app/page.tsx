@@ -48,7 +48,7 @@ export default function IndexPage() {
         <div className="flex w-full flex-col pb-8 pt-4 sm:flex-row  sm:space-x-4 md:pb-10 lg:pt-8">
           <LinkCard
             name="Projects"
-            description="All of my projects, open source packages, and apps"
+            description="All of my open source projects, packages, and apps"
             link="/projects"
           />
           <LinkCard
