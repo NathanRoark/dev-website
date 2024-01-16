@@ -91,6 +91,26 @@ export const RESUME_DATA = {
     "Python",
   ],
   projects: [
+    {
+      title: "Personal Blog",
+      description:
+        "Static Blog for showing and talking about media that I like.",
+      techStack: ["Astro", "TailwindCSS", "TypeScript", "Markdown"],
+      link: {
+        label: "nathanroark.com",
+        href: "https://nathanroark.com",
+      },
+    },
+    {
+      title: "Dev Website & Portfolio",
+      description:
+        "This website! My developer website to show my software engineering self.",
+      techStack: ["NextJS", "TypeScript", "TailwindCSS"],
+      link: {
+        label: "nathanroark.dev",
+        href: "https://nathanroark.dev",
+      },
+    },
     // {
     //   title: "Consultly",
     //   techStack: [

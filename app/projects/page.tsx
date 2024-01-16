@@ -1,7 +1,46 @@
-import ProjectCard from "@/components/project-card"
+import {
+  AmbitLogo,
+  BarepapersLogo,
+  BimLogo,
+  CDGOLogo,
+  ClevertechLogo,
+  ConsultlyLogo,
+  EvercastLogo,
+  Howdy,
+  JarockiMeLogo,
+  JojoMobileLogo,
+  Minimal,
+  MobileVikingsLogo,
+  MonitoLogo,
+  NSNLogo,
+  ParabolLogo,
+  TastyCloudLogo,
+  YearProgressLogo,
+} from "@/images/logos"
+import { Icons } from "@/components/icons"
+import { ProjectCard } from "@/components/project-card"
 import { PageHeader, PageHeaderHeading } from "@/components/page-header"
+import { Section } from "@/components/ui/section"
+import { RESUME_DATA } from "@/data/resume-data"
 
 const projectsData = [
+  {
+    title: "Consultly",
+    techStack: [
+      "Side Project",
+      "TypeScript",
+      "Next.js",
+      "Vite",
+      "GraphQL",
+      "WebRTC",
+    ],
+    description: "A platform to build and grow your online business",
+    logo: ConsultlyLogo,
+    link: {
+      label: "consultly.com",
+      href: "https://consultly.com/",
+    },
+  },
   {
     name: "Personal Blog",
     description: "Static Blog for showing and talking about media that I like.",
@@ -40,8 +79,23 @@ export default function ProjectsPage() {
           </span>
         </PageHeaderHeading>
       </PageHeader>
-
-      <div className="grid grid-cols-1  gap-8 sm:px-16 md:grid-cols-2 md:px-8 lg:grid-cols-3  xl:px-0">
+      <Section className="print-force-new-page scroll-mb-16">
+        <h2 className="text-xl font-bold">Projects</h2>
+        <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+          {RESUME_DATA.projects.map((project) => {
+            return (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                tags={project.techStack}
+                link={"link" in project ? project.link.href : undefined}
+              />
+            )
+          })}
+        </div>
+      </Section>
+      {/* <div className="grid grid-cols-1  gap-8 sm:px-16 md:grid-cols-2 md:px-8 lg:grid-cols-3  xl:px-0">
         {projectsData.map((project) => (
           <ProjectCard
             key={project.name + "-card"}
@@ -52,7 +106,7 @@ export default function ProjectsPage() {
             repo={project.repo}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }
