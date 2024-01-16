@@ -16,10 +16,7 @@ const defaultViewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nathanroark.dev"),
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
+  title:  siteConfig.name,
   description: siteConfig.description,
   keywords: [
     "Telperion",
@@ -77,7 +74,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-
       <body
         className={cn(
           "no-scrollbar overscroll-y-auto bg-background font-sans antialiased",

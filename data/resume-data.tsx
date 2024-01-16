@@ -88,7 +88,7 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
-      title: "Personal Blog",
+      title: "Blog",
       description:
         "Static Blog for showing and talking about media that I like.",
       techStack: ["Astro", "TypeScript", "Tailwind", "Markdown"],
@@ -98,7 +98,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Dev CV",
+      title: "CV",
       description:
         "This website! My developer website to show my software engineering self.",
       techStack: ["NextJS", "TypeScript", "Tailwind"],
