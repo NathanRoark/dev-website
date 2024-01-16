@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Nathan Roark",
   url: "https://nathanroark.dev",
-  ogImage: "https://nathanroark.dev/og.jpg",
+  ogImage: "https://nathanroark.dev/og.png",
   description:
     "Full Stack Engineer passionate about building and learning new things.",
   mainNav: [
