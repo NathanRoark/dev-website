@@ -107,6 +107,16 @@ export const RESUME_DATA = {
         href: "https://nathanroark.dev",
       },
     },
+    {
+      title: "Coverflow",
+      description:
+        "Demo site for a beautiful coverflow.",
+      techStack: ["NextJS", "TypeScript", "React", "SASS", "Styled Components"],
+      link: {
+        label: "nathanroark.dev",
+        href: "https://nathanroark.dev",
+      },
+    },
     // {
     //   title: "Consultly",
     //   techStack: [
