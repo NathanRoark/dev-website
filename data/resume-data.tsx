@@ -88,6 +88,15 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Coverflow",
+      description: "Demo site for a beautiful coverflow.",
+      techStack: ["NextJS", "TypeScript", "React", "SASS", "Styled Components"],
+      link: {
+        label: "coverflow.nathanroark.dev",
+        href: "https://coverflow.nathanroark.dev",
+      },
+    },
+    {
       title: "Blog",
       description:
         "Static Blog for showing and talking about media that I like.",
@@ -107,15 +116,7 @@ export const RESUME_DATA = {
         href: "https://nathanroark.dev",
       },
     },
-    {
-      title: "Coverflow",
-      description: "Demo site for a beautiful coverflow.",
-      techStack: ["NextJS", "TypeScript", "React", "SASS", "Styled Components"],
-      link: {
-        label: "coverflow.nathanroark.dev",
-        href: "https://coverflow.nathanroark.dev",
-      },
-    },
+
     // {
     //   title: "Consultly",
     //   techStack: [
