@@ -109,12 +109,11 @@ export const RESUME_DATA = {
     },
     {
       title: "Coverflow",
-      description:
-        "Demo site for a beautiful coverflow.",
+      description: "Demo site for a beautiful coverflow.",
       techStack: ["NextJS", "TypeScript", "React", "SASS", "Styled Components"],
       link: {
-        label: "nathanroark.dev",
-        href: "https://nathanroark.dev",
+        label: "coverflow.nathanroark.dev",
+        href: "https://coverflow.nathanroark.dev",
       },
     },
     // {
