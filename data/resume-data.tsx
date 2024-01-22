@@ -88,6 +88,21 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Life",
+      description: "Conway's Game of Life",
+      techStack: [
+        "NextJS",
+        "React",
+        "immer",
+        "Styled Components",
+        "TypeScript",
+      ],
+      link: {
+        label: "life.nathanroark.dev",
+        href: "https://life.nathanroark.dev",
+      },
+    },
+    {
       title: "Coverflow",
       description: "Demo site for a beautiful coverflow.",
       techStack: ["NextJS", "TypeScript", "React", "SASS", "Styled Components"],
