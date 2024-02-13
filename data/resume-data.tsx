@@ -112,6 +112,15 @@ export const RESUME_DATA = {
       },
     },
     {
+      title: "Wolf Sheep Predation",
+      description: "Wolf Sheep Predation Simulation using Agent Based Modeling",
+      techStack: ["NextJS", "React", "TypeScript"],
+      link: {
+        label: "wolf-sheep-predation.nathanroark.dev",
+        href: "https://wolf-sheep-predation.nathanroark.dev",
+      },
+    },
+    {
       title: "Blog",
       description:
         "Static Blog for showing and talking about media that I like.",
