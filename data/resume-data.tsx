@@ -90,7 +90,7 @@ export const RESUME_DATA = {
     {
       title: "Pong Wars",
       description: "Pong Wars using Canvas",
-      techStack: ["Svelte", "TypeScript", "Tailwind"],
+      techStack: ["Svelte", "SveltekKit", "TypeScript", "Tailwind"],
       link: {
         label: "pong-wars.nathanroark.dev",
         href: "https://pong-wars.nathanroark.dev",
