@@ -106,6 +106,15 @@ export const RESUME_DATA = {
       },
     },
     {
+      title: "Data Viz Demos",
+      description: "Demo site for some custom D3 Vizualizations.",
+      techStack: ["NextJS", "TypeScript", "React", "D3", "Tailwind"],
+      link: {
+        label: "data-viz.nathanroark.dev",
+        href: "https://data-viz.nathanroark.dev",
+      },
+    },
+    {
       title: "Life",
       description: "Conway's Game of Life",
       techStack: [
