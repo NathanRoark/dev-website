@@ -11,9 +11,9 @@ export const RESUME_DATA = {
   location: "Huntsville, AL",
   locationLink: "https://www.google.com/maps/place/Huntsville",
   about:
-    "Full Stack Engineer passionate about building and learning new things.",
+    "Full Stack Engineer passionate about building and learning new things",
   summary:
-    "As a Full Stack Engineer, I have successfully built many projects from start to finish for engineers internally and for customers. Currently, I work mostly with TypeScript, React, Python, and Rust. I have over 3 years of experience in working professionally on various teams.",
+    "As a Full Stack Engineer, I have successfully built many projects from start to finish for engineers internally and for customers. Currently, I work mostly with TypeScript, React, and Rust languages and have a Secret Security Clearance. I have over 3 years of experience in working professionally on various teams.",
   avatarUrl: "it-me.png",
   personalWebsiteUrl: "https://nathanroark.dev",
   contact: {
@@ -74,7 +74,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: "2023",
       description:
-        "Built and maintained several applications for internal and external customers. These included C++ applications that interfaced with a network to intercept Link16, VMF, and DIS traffic and convert it to the formate we needed for testing purposes.",
+        "Built and maintained several applications for internal and external customers. These included C++ applications that interfaced with a network to intercept Link16, VMF, and DIS traffic and convert it to the format we needed for testing purposes.",
     },
   ],
   skills: [
