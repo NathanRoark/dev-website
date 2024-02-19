@@ -74,7 +74,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: "2023",
       description:
-        "Built and maintained several applications for internal and external customers. Technologies: C++, Qt",
+        "Built and maintained several applications for internal and external customers. These included C++ applications that interfaced with a network to intercept Link16, VMF, and DIS traffic and convert it to the formate we needed for testing purposes.",
     },
   ],
   skills: [
@@ -114,6 +114,7 @@ export const RESUME_DATA = {
         "immer",
         "Styled Components",
         "TypeScript",
+        "Tailwind",
       ],
       link: {
         label: "life.nathanroark.dev",
