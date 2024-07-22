@@ -124,8 +124,12 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
+                <CardContent className="text-xs">
+                  <ul className="list-outside list-disc space-y-2 px-2">
+                    {work.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             )
